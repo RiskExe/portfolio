@@ -1,0 +1,14 @@
+:root {
+  --foreground: #ff6565;
+  --background:	#353337;
+}
+
+body {
+  color: white;
+  background-color: var(--background);
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  margin-top: 60px;
+}
