@@ -4,29 +4,55 @@ body {
   margin: 0px 0px;
 }
 
+
+.introduction {
+  height: 350px;
+  clip-path: polygon(0 25%, 25% 0, 100% 0, 100% 75%, 75% 100%, 0 100%, 0 25%);
+  background-color: #212529;
+  margin: 5% 15%;
+  position: relative;
+}
+
+.introduction div {
+  position: absolute;
+}
+
+.introduction .introcont {
+  margin: 8% 8%;
+  margin-bottom: 0%;
+}
+
+.introcont h1 {
+  text-align: left;
+  border-bottom: var(--foreground);
+}
+.introcont p {
+  text-align: center;
+}
+
+
+#githublink {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+#githublink button {
+  text-align: left;
+  width: 80%;
+  font-size: 1.5rem;
+}
+#githublink svg {
+  margin: auto 0;
+}
+
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   margin-top: 0px;
-}
-
-.meme {
-  margin: 5% auto;
-  border-radius: 50%;
-  display: flex;
-  width: 300px; height: 300px;
-  background-color: var(--foreground);
-  justify-content: center;
-  align-items: center;
-  transition: 1s;
-}
-
-.meme.ss {
-  border-radius: 0%;
-  transform: rotate(45deg);
-  /* background-color: white; */
 }
 
 button {
@@ -53,13 +79,15 @@ button:hover svg {
   background-color: #212529;
   margin-top: 0px;
   width: 100%;
+  padding-bottom: 5%;
 }
 
 .header h1 {
+  color: var(--foreground);
   margin-top: 0px;
   padding-top: 50px;
   margin-bottom: 0.5%;
-  font-size: 400%;
+  font-size: 500%;
   letter-spacing: 8px;
 }
 .header h3 {
@@ -85,11 +113,11 @@ svg:hover {
 
 .articlecontainer {
   margin: auto;
-  width: 1200px;
+  width: 85%;
 }
 
 .article {
-  height: 250px;
+  height: 300px;
   width: 50%;
   padding: 0.5% 1%;
   margin: 0 10%;
@@ -107,7 +135,7 @@ svg:hover {
 }
 
 .article.inverted {
-  clip-path: polygon(0 25%, 25% 0, 100% 0, 100% 100%, 0 100%) !important;
+  clip-path: polygon(0 40%, 40% 0, 100% 0, 100% 100%, 0 100%) !important;
   text-align: right;
   float: right !important;
 }
@@ -127,14 +155,15 @@ svg:hover {
   font-size: 2rem;
 }
 
-.articlebuttons button {
+.article:hover h1 {
+  color: var(--foreground);
 }
 
 .cont {
-  position: relative;
-  height: 250px;
+  height: 350px;
   width: 100%;
-  margin-top: 10px;
+  margin: 0 0;
+  position: relative;
 }
 
 @keyframes rotation {
@@ -169,4 +198,26 @@ svg:hover {
   right: 10%;
   clip-path: polygon(0 33%, 33% 0, 66% 0, 100% 33%, 100% 66%, 66% 100%, 33% 100%, 0 66%);
   animation: rotation 15s infinite linear;
+}
+
+.footer {
+  text-align: center;
+  background-color: #212529;
+}
+
+
+.footer p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.footer h1 {
+  color: var(--foreground);
+}
+
+.footer div {
+  width: 30%;
+  height: 200px;
+/*   border: 2px lime solid; */
+  display: inline-block;
 }
