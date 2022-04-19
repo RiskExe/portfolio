@@ -1,13 +1,18 @@
 
+
+body {
+  margin: 0px 0px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
-#app .meme {
+.meme {
   margin: 5% auto;
   border-radius: 50%;
   display: flex;
@@ -18,13 +23,13 @@
   transition: 1s;
 }
 
-#app .meme.ss {
+.meme.ss {
   border-radius: 0%;
   transform: rotate(45deg);
-  background-color: white;
+  /* background-color: white; */
 }
 
-#app button {
+button {
   width: 25%;
   background: transparent;
   border: 2px solid var(--foreground);
@@ -33,22 +38,37 @@
   font-weight: bold;
 }
 
-#app button:hover {
+button:hover {
   background-color: var(--foreground);
   border-color: transparent;
   color: white;
 }
 
-#app button:hover svg {
+button:hover svg {
   fill: white;
 }
 
-#app h1 {
+.header {
+  background-color: #22223b; /* maybe */
+  background-color: #212529;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.header h1 {
+  margin-top: 0px;
+  padding-top: 50px;
+  margin-bottom: 0.5%;
   font-size: 400%;
   letter-spacing: 8px;
 }
-#app h3 {
+.header h3 {
+  margin-top: 0;
   font-size: 150%;
+}
+
+.homebuttoncontainer {
+
 }
 
 .selected {
@@ -61,4 +81,92 @@ svg {
 
 svg:hover {
   fill:white;
+}
+
+.articlecontainer {
+  margin: auto;
+  width: 1200px;
+}
+
+.article {
+  height: 250px;
+  width: 50%;
+  padding: 0.5% 1%;
+  margin: 0 10%;
+  float: left;
+
+  clip-path: polygon(0 0, 0 100%, 60% 100%, 100% 60%, 100% 0);
+  background-color: #212529;
+}
+
+.article button {
+  float: left;
+}
+.article.inverted button {
+  float: right;
+}
+
+.article.inverted {
+  clip-path: polygon(0 25%, 25% 0, 100% 0, 100% 100%, 0 100%) !important;
+  text-align: right;
+  float: right !important;
+}
+.article.inverted h1 {
+  text-align: right;
+}
+
+.articlecontainer button {
+  font-size: 1rem;
+}
+
+.articlecontainer h1, p {
+  text-align: left;
+}
+
+.article h1 {
+  font-size: 2rem;
+}
+
+.articlebuttons button {
+}
+
+.cont {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.cont .shape {
+  position: absolute;
+  background-color: var(--foreground);
+  height: 100px; width: 100px;
+  top: 25%;
+  border: 1px #353337 solid;
+}
+
+.cont .square {
+  animation: rotation 20s infinite linear;
+  right: 10%;
+}
+
+.cont .triangle {
+  left: 10%;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  animation: rotation 10s infinite linear;
+}
+
+.cont .hexagon {
+  right: 10%;
+  clip-path: polygon(0 33%, 33% 0, 66% 0, 100% 33%, 100% 66%, 66% 100%, 33% 100%, 0 66%);
+  animation: rotation 15s infinite linear;
 }
