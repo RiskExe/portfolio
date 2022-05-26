@@ -5,7 +5,7 @@ const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
 
 export default defineConfig({
-	base: '/portfolio/',
+	base: '/portfolio',
 	root,
 	build: {
 		outDir,
@@ -13,9 +13,8 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve(root, 'index.html'),
-				skydiving: resolve(root, 'skydiving', 'index.html')
 			}
 		}
 	},
-	server: { port: 3001 },
+	server: { port: 3000 },
 });
